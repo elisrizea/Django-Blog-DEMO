@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main %}
+<section class="contact_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-2 col-md-4 offset-md-2">
+          <h2 class="custom_heading">Log in:</h2>
+
+<form method="post" >
+    {{ form.as_p }}
+    {% csrf_token %}
+     <button type="submit">Log In</button>
+
+  <br><br><br>
+</form>
+
+            <br>
+           You do tot have an account <a href="{%  url 'register' %}">Click Here Register</a>
+<br><br>
+
+        </div></div>
+    </div></section>
+  {% endblock main %}

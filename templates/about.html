@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+ {% load static %}
+{% block main %}
+
+
+
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="img-box">
+            <img src="{% static 'images/about-img.png' %}" alt="" />
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="detail-box">
+            <div class="custom_heading-container">
+              <h2>
+               Simple Django Blog DEMO
+              </h2>
+            </div>
+
+            <p>
+             Django web app for users to share their thoughts online.<br><br>
+                Features: <br>*Form class  <br>*Restful APIs<br><br>
+Demo details:<br>
+This demo is made from 3 apps:<br><br>
+                main_app ()<br>
+1.	The web application have a dashboard (home), where latest posts will show up. Posts should be ordered by date.<br>
+2.	In order to post a new thought, you have to be a registered user.<br>
+3.	User needs to log in to see their profile name on navigation bar.<br>
+4.	User can post new thoughts from their profile.<br>
+5.	The posted thoughts will be stored in a MySql database.<br>
+6. GET request should get 10 latest posted thoughts in JSON format<br>
+7. POST request should store a new post in the database.<br>
+(If user is authenticated is allow to submit a post if not he can only see the posts)
+                <a href="http://127.0.0.1:8000/api/">API Link</a>
+<br><br>
+                user ()<br><br>
+1.Register new users.<br>
+2.Login/logout<br><br>
+                                sendmail ()<br><br>
+1.Contact form<br><br>
+
+Tis demo has tests for all views from main_app and sendmail
+
+            </p><br><br>
+            <div>
+              <a href="{% url 'posts'%}">
+                List all posts
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+{% endblock main %}
+
+

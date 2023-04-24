@@ -1,0 +1,30 @@
+
+
+{% for post in posts %}
+<div class="col-md-3 col-sm-6">
+          <div class="content-box bg-green">
+            <div class="img-box">
+              <img src="images/idea.png" alt="" />
+            </div>
+            <div style="text-align:left;">
+              <h3 style="color:red; font-weight: 900; text-align: center;">
+
+
+               <span >  {{post.title}}</span><br><br>
+</h3>
+
+                <h6>
+                 <span > Posted on: <br></span>  {{post.date}}<br>
+              </h6>
+              <p>
+                 <h6>
+               <br> {{post.content}}<br><br>
+              </h6>
+                 <h6>
+                  Posted by: <span style="color:red; font-weight: 900;"> {{post.post_author}}</span><br>
+              </h6>
+              </p>
+            </div>
+          </div>
+        </div>
+{% endfor %}

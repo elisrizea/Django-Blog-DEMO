@@ -1,0 +1,107 @@
+   {% load static %}
+<!-- info section -->
+  <section class="info_section layout_padding-top layout_padding2-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="info_links pl-lg-5">
+            <h4>
+              Menu
+            </h4>
+            <ul>
+              <li>
+                <a href="{% url 'about' %}">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a class="" href="{% url 'portfolio' %}">Portfolio </a>
+              </li>
+
+               <li>
+                <a class="" href="{% url 'posts' %}">All posts</a>
+              </li>
+              {% if user.is_authenticated %}
+               <li>
+                <a class="" href="{% url 'add_post' %}">Add New Post</a>
+              </li>
+              {% endif  %}
+              <li>
+                <a href="{% url 'support' %}">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info_contact">
+            <h4>
+              Location
+            </h4>
+            <div>
+              <img src="{% static 'images/location.png' %}" alt="" />
+              <p>
+                Radlett, United Kingdom
+              </p>
+            </div>
+            <div>
+              <img src="{% static 'images/telephone.png' %}" alt="" />
+              <p>
+                ( +44 7429 386264 )
+              </p>
+            </div>
+            <div>
+              <img src="{% static 'images/envelope.png' %}" alt="" />
+              <p>
+                alin@a2.software
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="info_social">
+            <h4>
+              Social Link
+            </h4>
+            <div class="social_container">
+              <div>
+                <a href="https://www.linkedin.com/in/alin-rizea-b10368104/">
+                  <img src="{% static 'images/facebook-logo.png' %}" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/alin-rizea-b10368104/">
+                  <img src="{% static 'images/twitter-logo.png' %}" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/alin-rizea-b10368104/">
+                  <img src="{% static 'images/instagram.png' %}" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/in/alin-rizea-b10368104/">
+                  <img src="{% static 'images/linkedin-sign.png' %}" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2023 All Rights Reserved By
+      <a href="https://www.linkedin.com/in/alin-rizea-b10368104/">Alin Rizea</a>
+    </p>
+  </footer>
+  <!-- footer section -->

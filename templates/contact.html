@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+
+
+  <!-- contact section -->
+
+  <section class="contact_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-2 col-md-5 offset-md-1">
+          <h2 class="custom_heading">Contact Us</h2>
+          {%  if s == 'success' %}
+          <h3>Thank you for your message.</h3>
+          <h6>For the email form to actualy send an email you can do a free account a service like:<br><br>
+            <a href="https://signup.sendgrid.com/">Send Grid</a><br><br>
+            and add to settings.py:<br><br>
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"  # new<br>
+DEFAULT_FROM_EMAIL = "will@wsvincent.com"<br>
+EMAIL_HOST = "smtp.sendgrid.net"  # new<br>
+EMAIL_HOST_USER = "apikey"  # new<br>
+EMAIL_HOST_PASSWORD = "<sendgrid_password>"  # new<br>
+EMAIL_PORT = 587  # new<br>
+EMAIL_USE_TLS = True  # new<br>
+
+          </h6>
+          <br> <br> <br> <br>
+          {% else %}
+            <form method="post">
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+<br><br>
+            </div>
+          </form>
+          {% endif %}
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+            <img src="{% static 'images/contact.jpg' %}" alt="" class="w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  {% endblock main %}

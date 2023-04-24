@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
+  <!-- do section -->
+  <section class="do_section layout_padding">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          Latest posts
+        </h2>
+        {{redirect_context}}
+      </div>
+      <div class="row">
+
+
+
+        {% include 'card.html' %}
+
+
+
+
+
+      </div>
+    </div>
+  </section>
+  <!-- end do section -->
+  <!-- skill section -->
+
+
+
+  <!-- end skill section -->
+
+
+{% endblock main %}
